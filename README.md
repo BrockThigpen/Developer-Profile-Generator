@@ -1,5 +1,7 @@
 # Developer-Profile-Generator
 
+A simple application that will create a pdf file based on information found on the users Github profile.
+
 # How to use
 <ol>
   <li>Clone this repo</li>
