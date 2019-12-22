@@ -7,3 +7,5 @@
   <li>Execute node index.js in terminal</li>
   <li>Follow prompts</li>
 </ol>
+
+![alt text](assets/images/demo.gif)
