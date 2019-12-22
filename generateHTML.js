@@ -1,27 +1,21 @@
 const colors = {
   green: {
-    wrapperBackground: "#E6E1C3",
-    headerBackground: "#C1C72C",
-    headerColor: "black",
-    photoBorderColor: "#black"
+    color: 'green'
   },
   blue: {
-    wrapperBackground: "#5F64D3",
-    headerBackground: "#26175A",
-    headerColor: "white",
-    photoBorderColor: "#73448C"
+    color: 'blue'
   },
   pink: {
-    wrapperBackground: "#879CDF",
-    headerBackground: "#FF8374",
-    headerColor: "white",
-    photoBorderColor: "#FEE24C"
+    color: 'pink'
   },
   red: {
-    wrapperBackground: "#DE9967",
-    headerBackground: "#870603",
-    headerColor: "white",
-    photoBorderColor: "white"
+    color: 'red'
+  },
+  orange: {
+    color: 'orange'
+  },
+  purple : {
+    color: 'purple'
   }
 };
 
@@ -71,6 +65,7 @@ function generateHTML(data) {
          }
          h1 {
          font-size: 3em;
+         color: ${colors[data.color].color}
          }
          h2 {
          font-size: 2.5em;
@@ -158,6 +153,11 @@ function generateHTML(data) {
          flex: 1;
          text-align: center;
          }
+         .BL {
+          margin-top: 25px;
+          padding-left: 15px;
+          border-left: 1px solid grey;
+          }
 
          a, a:hover {
          text-decoration: none;
@@ -170,5 +170,25 @@ function generateHTML(data) {
             zoom: .75; 
           } 
          }
-      </style>`
-        }
+      </style>
+    </head>
+    <body>
+    <div class="container">
+        <h1>${data.name}</h1>
+        <hr>
+        <div class="BL">
+            <img src='${data.avatar_url}' alt='Photo of ${data.name}'/>
+            <p>Bio: ${data.bio}</p>
+            <p>Company: ${data.company}</p>
+            <p>Repo URL: <a href='${data.html_url}'>${data.name}'s Repo</a></p>
+            <p>Public Repos: ${data.public_repos}</p>
+            <p>Followers: ${data.followers}</p>
+            <p>Following: ${data.following}</p>
+            <p>Location: ${data.location}</p>
+        </div>
+    </div>
+    </body>
+</html>`
+}
+
+module.exports = generateHTML;
