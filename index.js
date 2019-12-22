@@ -2,8 +2,7 @@ const axios = require("axios");
 const inquirer = require("inquirer");
 const genHTML = require("./generateHTML");
 const createPDF = require("html-pdf");
-const options = { format: "Letter" }
-
+const options = { format: "Letter" };
 const questions = [
     {
         type: 'input',
@@ -24,11 +23,9 @@ const questions = [
         ]
     }
 ];
-
 function prompt() {
     return inquirer.prompt(questions);
 }
-
 function init() {
     prompt()
         .then(({ username, favColor }) => {
@@ -47,5 +44,4 @@ function init() {
                 })
         })
 }
-
 init();
