@@ -1,8 +1,9 @@
 # Developer-Profile-Generator
 
 # How to use
-
-Clone this repo
-Run npm install
-Execute node index.js in terminal
-Follow prompts
+<ol>
+  <li>Clone this repo</li>
+  <li>Run npm install</li>
+  <li>Execute node index.js in terminal</li>
+  <li>Follow prompts</li>
+</ol>
